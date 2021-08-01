@@ -53,12 +53,19 @@ ul, li {
 
       li {
         margin-left: 35px;
+        margin-top: 10px;
+        padding-bottom: 10px;
         font-style: normal;
         font-weight: bold;
         font-size: 13px;
         line-height: 15px;
         color: #000000;
         cursor: pointer;
+        border-bottom: 2px solid transparent;
+
+        &:focus {
+          border-bottom: 2px solid #388067;
+        }
       }
     }
   }
