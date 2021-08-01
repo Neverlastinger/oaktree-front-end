@@ -533,6 +533,112 @@ ul, li {
   }
 }
 
+.app-footer {
+  box-sizing: border-box;
+  padding: 67px 39px 56px 39px;
+  background-color: #388067;
+
+  .menus {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 53px;
+    border-bottom: 1px solid #FFFFFF;
+
+    .menu {
+      margin-left: 24px;
+      color: white;
+
+      .title {
+        margin-bottom: 24px;
+        font-weight: bold;
+        font-size: 14.5px;
+        line-height: 17px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      ul li a {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 183.4%;
+        color: white;
+      }
+    }
+  }
+
+  .closing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .social {
+      position: absolute;
+      right: 0;
+      top: 35px;
+
+      .icon {
+        margin-right: 23px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      margin-top: 49px;
+
+      li {
+        margin-right: 47px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        a {
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 15px;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .copy {
+      margin-top: 46px;
+      max-width: 618px;
+      font-size: 10px;
+      line-height: 145.4%;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .bottom-menu {
+      display: flex;
+      justify-content: center;
+      margin-top: 28px;
+
+      li {
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        a {
+          font-weight: 600;
+          font-size: 10px;
+          line-height: 12px;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
 .primary-button {
   width: 184px;
   height: 57px;
