@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "live-server --port=4004 --no-browser --open=pages"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
