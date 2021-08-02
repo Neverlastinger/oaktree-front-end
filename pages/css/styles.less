@@ -28,15 +28,68 @@ ul, li {
     .top-level-navigation {
       display: flex;
       margin-left: 98px;
+      height: 100%;
 
-      li {
-        margin: 0 18px;
-        font-weight: bold;
-        font-size: 14.5px;
-        line-height: 17px;
-        letter-spacing: 0.2em;
-        color: #000000;
-        text-transform: uppercase;
+      > li {
+        display: flex;
+        align-items: center;
+        padding: 0 18px;
+        height: 100%;
+
+        > .title {
+          margin-top: 10px;
+          padding-bottom: 10px;
+          font-weight: bold;
+          font-size: 14.5px;
+          line-height: 17px;
+          letter-spacing: 0.2em;
+          color: #000000;
+          text-transform: uppercase;
+          border-bottom: 2px solid transparent;
+          cursor: default;
+        }
+
+        &:hover {
+          > .title {
+            border-bottom: 2px solid #388067;
+          }
+
+          .dropdown-bar {
+            display: block;
+          }
+        }
+
+        &#about-menu-item {
+          .dropdown-bar {
+            .dropdown-bar-submenus {
+              margin-left: 398px;
+            }
+          }
+        }
+
+        &#strategies-menu-item {
+          .dropdown-bar {
+            .dropdown-bar-submenus {
+              margin-left: 500px;
+            }
+          }
+        }
+
+        &#philanthropy-menu-item {
+          .dropdown-bar {
+            .dropdown-bar-submenus {
+              margin-left: 652px;
+            }
+          }
+        }
+
+        &#insights-menu-item {
+          .dropdown-bar {
+            .dropdown-bar-submenus {
+              margin-left: 846px;
+            }
+          }
+        }
       }
     }
 
@@ -50,58 +103,58 @@ ul, li {
 
     .secondary-navigation {
       display: flex;
+      height: 100%;
 
-      li {
+      > li {
+        display: flex;
+        align-items: center;
         margin-left: 35px;
-        margin-top: 10px;
-        padding-bottom: 10px;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 13px;
-        line-height: 15px;
-        color: #000000;
-        cursor: pointer;
-        border-bottom: 2px solid transparent;
+        height: 100%;
 
-        &:focus {
-          border-bottom: 2px solid #388067;
+        > .title {
+          margin-top: 10px;
+          padding-bottom: 10px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 13px;
+          line-height: 15px;
+          color: #000000;
+          border-bottom: 2px solid transparent;
+          cursor: default;
+        }
+
+        &:hover {
+          > .title {
+            border-bottom: 2px solid #388067;
+          }
+
+          .dropdown-bar {
+            display: block;
+          }
+        }
+
+        &#investors-menu-item {
+          .dropdown-bar {
+            .dropdown-bar-submenus {
+              margin-left: 992px;
+            }
+          }
         }
       }
     }
-  }
 
-  .hero-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 566px;
-    background: url(../img/hero-image.png) no-repeat;
-    background-size: cover;
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: black;
-      opacity: 0.3;
-    }
-
-    .secondary-navigation-content {
+    .dropdown-bar {
       display: none;
       position: absolute;
-      top: 0px;
+      top: 108px;
       left: 0px;
       right: 0px;
       background-color: white;
       border-top: 1px solid #E7E7E7;
       z-index: 2;
 
-      .submenus {
+      .dropdown-bar-submenus {
         display: flex;
-        margin-left: 1122px;
         padding: 18px 0 26px 0;
 
         .menu {
@@ -135,6 +188,26 @@ ul, li {
           }
         }
       }
+    }
+  }
+
+  .hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 566px;
+    background: url(../img/hero-image.png) no-repeat;
+    background-size: cover;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: black;
+      opacity: 0.3;
     }
 
     .content {
