@@ -318,55 +318,74 @@ ul, li {
 
     .box {
       box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
       position: relative;
-      padding: 28px 20px;
+      padding: 0 20px 28px 20px;
       width: 301px;
       flex-basis: 301px;
       height: 304px;
       color: white;
+      filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.2));
+      border-radius: 4px;
+      overflow: hidden;
 
       &:nth-child(2n) {
         margin: 72px 0 0 77px;
       }
 
-      .title {
-        position: relative;
-        margin-bottom: 9px;
-        font-weight: bold;
-        font-size: 28px;
-        line-height: 28px;
+      &:hover {
+        .box-content {
+          top: 116px;
+
+          .message {
+            opacity: 1;
+          }
+        }
+
+        .gradient {
+          top: 0px;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 87.5%);
+        }
       }
 
-      .message {
+      .box-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
         position: relative;
-        margin-bottom: 15px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-      }
+        top: 253px;
+        transition: all 0.2s;
 
-      .link {
-        position: relative;
-        color: white;
+        .title {
+          margin-bottom: 9px;
+          font-weight: bold;
+          font-size: 28px;
+          line-height: 28px;
+        }
+
+        .message {
+          margin-bottom: 15px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          opacity: 0;
+          transition: all 0.2s;
+        }
+
+        .link {
+          color: white;
+        }
       }
 
       .gradient {
         position: absolute;
-        top: 0;
+        top: 66.78%;
         bottom: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 87.5%);
-
-        &.small {
-          top: 66.78%;
-          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-        }
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+        transition: all 0.2s;
       }
 
       &.credit {
@@ -480,6 +499,12 @@ ul, li {
 
         .date {
           margin-bottom: 4px;
+        }
+
+        .photo {
+          img {
+            border-radius: 4px;
+          }
         }
 
         .title {
@@ -777,6 +802,7 @@ ul, li {
   font-weight: bold;
   font-size: 14px;
   line-height: 0%;
+  border-radius: 3px;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
